@@ -26,7 +26,7 @@ keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
 
 # create a pytrends object
-pytrends = TrendReq()
+pytrends = TrendReq(retries=3)
 
 # create an empty dataframe
 df = pd.DataFrame()
