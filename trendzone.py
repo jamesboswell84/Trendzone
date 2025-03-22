@@ -26,7 +26,7 @@ keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
 st.write(keywords)
 # create a pytrends object
-pytrends = TrendReq(request_args = {'headers': {'Cookie': AKEyXzVUyx86HD1H_bZtssqh5sM_eqt0g0LR1gSoMsInfzuCAqSppmF9cn8sDVe7G5mlvNaIbrsT}})
+pytrends = TrendReq(request_args = {'headers': {'Cookie': 'AKEyXzVUyx86HD1H_bZtssqh5sM_eqt0g0LR1gSoMsInfzuCAqSppmF9cn8sDVe7G5mlvNaIbrsT'}})
 
 # create an empty dataframe
 df = pd.DataFrame()
