@@ -20,7 +20,7 @@ import pandas as pd
 st.title("Google Trends Scraper")
 st.write("Enter up to 25 keywords separated by commas")
 # if keywords in the input box have line break, then split by comma and take the first 25 keywords
-keywords = st.text_input("Keywords")
+keywords = st.text_area("Keywords")
 keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
 
