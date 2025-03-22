@@ -24,7 +24,7 @@ keywords = st.text_area("Keywords")
 keywords = keywords.replace("\n", ",")
 keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
-
+st.write(keywords)
 # create a pytrends object
 pytrends = TrendReq(retries=3)
 
