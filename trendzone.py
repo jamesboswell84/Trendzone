@@ -20,7 +20,8 @@ import pandas as pd
 st.title("Google Trends Scraper")
 st.write("Enter up to 25 keywords separated by commas")
 # if keywords in the input box have line break, then split by comma and take the first 25 keywords
-keywords = st.text_input("Keywords")
+keywords = st.text_area("Keywords")
+keywords = keywords.replace("\n", ",")
 keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
 
@@ -30,13 +31,12 @@ pytrends = TrendReq()
 # create an empty dataframe
 df = pd.DataFrame()
 
-if st.text_input:
-    if keywords:
-        for keyword in keywords:
-            # get the data
-            pytrends.build_payload([keyword], timeframe='today 5-y')
-            data = pytrends.interest_over_time()
-            df = pd.concat([df, data])
+if keywords:
+    for keyword in keywords:
+        # get the data
+        pytrends.build_payload([keyword], timeframe='today 5-y')
+        data = pytrends.interest_over_time()
+        df = pd.concat([df, data])
 
 # remove the match column
 df = df.drop(columns=["isPartial"])
