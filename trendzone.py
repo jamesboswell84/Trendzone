@@ -31,7 +31,7 @@ pytrends = TrendReq(retries=3)
 # create an empty dataframe
 df = pd.DataFrame()
 
-if keywords:
+if st.button("Get Trends"):
     for keyword in keywords:
         # get the data
         pytrends.build_payload([keyword], timeframe='today 5-y')
@@ -39,27 +39,27 @@ if keywords:
         df = pd.concat([df, data])
 
 # remove the match column
-df = df.drop(columns=["isPartial"])
+    df = df.drop(columns=["isPartial"])
 
 # group by date, but keep all columns
-df = df.groupby("date").sum()
+    df = df.groupby("date").sum()
 
 # reset the index
-df = df.reset_index()
+    df = df.reset_index()
 
 # save the data via a streamlit download button
 # create a download
-st.write("Download the data")
-st.write(df)
-st.write("Click the button below to download the data")
-st.write("Right click and save as keywords.csv")
-st.write("This will save the data to your local machine")
-st.write("You can open the file in Excel or Google Sheets")
-st.write("You can also use the data for further analysis")
+    st.write("Download the data")
+    st.write(df)
+    st.write("Click the button below to download the data")
+    st.write("Right click and save as keywords.csv")
+    st.write("This will save the data to your local machine")
+    st.write("You can open the file in Excel or Google Sheets")
+    st.write("You can also use the data for further analysis")
 
 # download the data
-csv = df.to_csv(index=False)
-st.markdown(f'<a href="data:file/csv;base64,{csv}">Download csv file</a>', unsafe_allow_html=True)
+    csv = df.to_csv(index=False)
+    st.markdown(f'<a href="data:file/csv;base64,{csv}">Download csv file</a>', unsafe_allow_html=True)
 
 
 
