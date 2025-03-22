@@ -26,7 +26,7 @@ keywords = keywords.split(",")[:25]
 #keywords = ["haribo", "pringles", "walkers", "cadbury", "nestle", "mars", "galaxy", "lindt", "toblerone"]
 st.write(keywords)
 # create a pytrends object
-pytrends = TrendReq(request_args = {'headers': {'Cookie': 'AKEyXzVUyx86HD1H_bZtssqh5sM_eqt0g0LR1gSoMsInfzuCAqSppmF9cn8sDVe7G5mlvNaIbrsT'}})
+pytrends = TrendReq(request_args = {'headers': {'Cookie': 'ffD__G26sG0WTVmL7aLkVCNqw6KwdP5QAOpuWR1212OQQ-p4grH4lT9RpgY-AYgklQ8qOzXpSKxX22MSOU5Y7wKcmmG81tlXuH-D6CcUDOH8P13u5VMlqGgZK8GrUcO3P3DolzFA4-v1jwfwUJx0aaFbPBQENGJA4BFQMy6IJSpX4DAKsdZbn3goSyZMT43MndyW-BgkHW4bQje2NU0vstTJLg3pBMWFDFUDbFgUOHy7LPSaeFnmItE6xCX5jph7f29uY-liW8PxNJkzsdwl5NblhNkHajbB_ZNTQyF2CkHnSoQsNSn07Zu2e48gWyf764cqjPdLKH5iKotZpWKO-CSu5010A8pjt2KKNfPYlLoax1vlUDV7bQ6C5_t9dHEFFuqnUHiN7eLhEUUIxo350EqmHZZZ8qznfgh2sy65G9GmoQ4AJKCHEPk7aHHRm9YLTRYQzABbJ5fbsKLebjGFpDj5-JlYl7J-iR0QrxdV2eUe6ZdR5a7QJIpopUrY5vQ2bZk6-6CzNGvGYtH88ayk6s079ez7UZFxEXQCANq3ea2V4ZHow5MGoqGlwKVg_s4-VWkGxWi4atn0Cydb4W7b9bODMIEzpDXnPDakHo0onQLosYmVDAPYwIJLJqgw0ws_SnHRxN2cEmaqnCwKrJKVc25eRinaTnMdUsvGxhc4oGiiQc82QxjsQXkJh5AWlHmnzcavzZI432cuAP4HWGOiC_nQUP-bjCQM35Qoq9qNBzJtJryB5HCshJ-rnD8b5qAkxyJeytrn02tiRTRtFo44xo1j_vlUd9U4EacqzXGNTkfVdb-OvzLFilRVyla2LgwXlmA015B-v99v8yvx3EngcUc2OgthEVuJb1_pvLKEyPEJwElrKXcUWVg6_uTc8DSve6sIGBLwcVIbrRwYBZb4suaB9atREaCD4xrSLZuVtXg8271ajlVZ-ZMdKgZVAw-2Xb1ztq-JIotblmgyCEvpjS3H0CmxDSKz5w'}})
 
 # create an empty dataframe
 df = pd.DataFrame()
